@@ -6,7 +6,7 @@ A hands-on incident response investigation based on the Splunk BOTS v1 simulated
 
 This project investigates the compromise and defacement of a simulated Joomla web server.
 
-The investigation reconstructs the attack chain using multiple security telemetry sources and identifies the attacker infrastructure, execution activity, command-and-control communication, and indicators of compromise.
+The investigation reconstructs the attack chain using multiple security telemetry sources and analyzes attacker infrastructure, execution activity, command-and-control communication, and indicators of compromise.
 
 ## Attack Chain
 
@@ -40,6 +40,14 @@ Website Defacement
 - SOC detection opportunities
 - Security recommendations
 
+## Key Findings
+
+- A simulated Joomla web server compromise was identified.
+- Web shell activity was observed during the investigation.
+- Suspicious process execution was analyzed using Sysmon telemetry.
+- Command-and-control communication was identified through network telemetry.
+- Indicators of compromise were extracted and correlated across multiple data sources.
+
 ## Tools & Technologies
 
 - Splunk
@@ -57,11 +65,22 @@ Website Defacement
 
 ## Environment
 
-**Scenario:** Splunk BOTS v1 / TryHackMe simulated enterprise  
+**Scenario:** Splunk BOTS v1 simulated enterprise dataset  
 **Affected Asset:** Joomla web server — `192.168.250.70`  
 **IR Phase:** Detection and Analysis
 
 > This is a simulated lab investigation based on the Splunk BOTS v1 dataset and is not a real-world incident.
+
+## Evidence
+
+Investigation screenshots and supporting evidence are available in the [`screenshots`](screenshots/) directory.
+
+Selected evidence includes:
+
+- Website defacement
+- Suricata detection of Acunetix activity
+- Web shell process activity
+- Command-and-control traffic
 
 ## Report
 
